@@ -1,0 +1,68 @@
+body {
+    /* Mantenha o fundo e a fonte */
+    background: rgb(84, 84, 255);
+    font: normal 14pt Arial, sans-serif;
+
+    /* CORREÇÃO: Remova o alinhamento vertical e deixe o layout seguir o fluxo normal */
+    display: flex;
+    flex-direction: column; /* Coloca os filhos (header, section, footer) em coluna */
+    align-items: center;    /* Centraliza HORIZONTALMENTE o contêiner */
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.438);
+}
+
+/* ESTILO DO FORMULÁRIO INTERNO (Inputs) */
+#msg {
+    display: flex; /* Ativa Flexbox para os filhos */
+    flex-direction: column; /* Coloca inputs/botões em coluna */
+    align-items: center; /* Centraliza HORIZONTALMENTE dentro do contêiner */
+    gap: 10px; /* Adiciona 10px de espaço entre os elementos (limpa a bagunça de margin) */
+}
+
+
+/* ESTILO DOS BOTÕES */
+input[type="button"] {
+    background-color: #28a745; /* Cor de sucesso (Verde padrão) */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 5px; /* Arredondamento suave */
+    padding: 10px 20px; /* Aumentar a área clicável */
+    font-weight: bold;
+    cursor: pointer; /* Indica que é clicável (UX) */
+    transition: background-color 0.3s; /* Para a transição suave de cor */
+}
+
+/* EFEITO AO PASSAR O MOUSE (HOVER) */
+input[type="button"]:hover {
+    background-color: #218838; /* Escurece o verde ao passar o mouse */
+}
+
+/* ESTILO DA ÁREA DE RESULTADO (Resultado e Finalização) */
+#res {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: left; /* Centraliza o contêiner, mas alinha o texto interno para leitura */
+    line-height: 1.6; /* Melhora a leitura dos parágrafos de resultado */
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px; /* Separar o footer do cartão */
+}
